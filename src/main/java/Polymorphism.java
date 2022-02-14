@@ -42,7 +42,7 @@ class WandaVision extends Movie {
 }
 
 class NWH extends Movie {
-    public NHW() {
+    public NWH() {
         super("Spider-Man: No Way Home");
     }
     @Override
@@ -65,5 +65,20 @@ public class Polymorphism {
     }
     public static Movie randomMovie() {
         int randomNum = (int) (Math.random() * 5 + 1);
+        System.out.println("number generated: " + randomNum);
+        switch(randomNum) {
+            case 1:
+                return new Jaws;
+            case 2:
+                return new Forgettable;
+            case 3:
+                return new NWH;
+            case 4:
+                return new VelociPastor;
+            case 5:
+                return new WandaVision;
+            default:
+                return null;
+        }
     }
 }
